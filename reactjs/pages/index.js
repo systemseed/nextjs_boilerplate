@@ -1,5 +1,5 @@
 import React from 'react';
-import HelloFriend from '../components/HelloFriend';
+import GifPages from '../components/GifPages';
 
 class Page extends React.Component {
   static async getInitialProps() {
@@ -9,7 +9,7 @@ class Page extends React.Component {
   }
 
   render() {
-    return <HelloFriend />;
+    return <GifPages />;
   }
 }
 

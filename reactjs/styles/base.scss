@@ -1,3 +1,7 @@
+$layout_margin: 1%;
+$black_clr: #000000;
+$pagination_hover: #f4f4f4;
+
 body {
   font-family: sans-serif;
   font-size: 16px;
@@ -6,4 +10,31 @@ body {
   margin: 0;
   padding: 0;
   min-width: 250px;
+}
+
+.Pagination {
+  margin: $layout_margin;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
+  &_Item {
+      padding: .5%;
+      position: relative;
+      cursor: pointer;
+      min-width: 3rem;
+      text-align: center;
+      border:1px solid #ced4da;
+      color: $black_clr;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      font-size: 1.2rem;
+      &:hover {
+          background-color: $pagination_hover;
+      }
+      &:active{
+          color: #445565 !important;
+          background-color: #e3e7eb !important;
+          border-color: #ced4da !important;
+      }
+  }
 }

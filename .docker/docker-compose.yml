@@ -12,7 +12,7 @@ services:
       - "3000"
 
   traefik:
-    image: traefik
+    image: traefik:$TRAEFIK_TAG
     restart: unless-stopped
     command: -c /dev/null --web --docker --logLevel=INFO
     ports:

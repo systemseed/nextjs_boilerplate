@@ -19,9 +19,9 @@ default: up
 
 up:
 	@echo "${YELLOW}Build and run containers...${COLOR_END}"
-	docker-compose up -d  --remove-orphans
+	docker-compose up -d --remove-orphans
 	@echo "${YELLOW}Starting the project...${COLOR_END}"
-	docker-compose run node yarn start:dev
+	docker-compose run node npm run start:dev
 
 stop:
 	@echo "${YELLOW}Stopping containers...${COLOR_END}"
@@ -38,11 +38,11 @@ down:
 
 install:
 	@echo "${YELLOW}Installing the project...${COLOR_END}"
-	docker-compose run node yarn install
+	docker-compose run node npm install
 
 lint:
 	@echo "${YELLOW}Checking coding styles...${COLOR_END}"
-	docker-compose run node yarn eslint --fix
+	docker-compose run node npm run eslint --fix
 
 # https://stackoverflow.com/a/6273809/1826109
 %:

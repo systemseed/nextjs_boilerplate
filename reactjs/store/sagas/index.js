@@ -1,9 +1,9 @@
-import { all } from 'redux-saga/effects';
+import { all, fork } from 'redux-saga/effects';
 // Put all your sagas here.
-import exampleSagas from './example';
+import { gifSagaWatcher } from './GifSaga';
 
 export default function* rootSaga() {
   yield all([
-    ...exampleSagas(),
-  ]);
+      fork(gifSagaWatcher)
+  ])
 }

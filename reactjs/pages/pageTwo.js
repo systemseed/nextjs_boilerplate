@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import Gallery from '../components/Gallery';
 
-class Page extends React.Component {
+class PageTwo extends React.Component {
 
   componentDidMount() {
     this.props.dispatch({type: 'API_CALL_REQUEST'});
@@ -28,20 +28,19 @@ class Page extends React.Component {
           </div>
           <div className="row justify-content-center">
             <button  type="button" className="btn btn-dark">
-              <Link href="/pageTwo"><a style={{color:"#fff"}}>Next</a></Link>
+              <Link href="/index"><a style={{color:"#fff"}}>Prev</a></Link>
             </button>
           </div>
         </div>
         <div className="container">
-          <Gallery giphyData={giphys} />
-
+          <Gallery giphyData={giphys}/>
         </div>
       </div>
     );
   }
 }
 
-Page.propTypes = {
+PageTwo.propTypes = {
   imageData: PropTypes.array
 }
 
@@ -51,4 +50,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(Page);
+export default connect(mapStateToProps)(PageTwo);

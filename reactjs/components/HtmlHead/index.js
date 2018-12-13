@@ -25,6 +25,7 @@ SystemSeed Technical Assessment
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <link rel="shortcut icon" href="/static/favicon.ico" type="image/vnd.microsoft.icon" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
       {stylesheets}
     </Head>
   );

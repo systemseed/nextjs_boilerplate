@@ -6,6 +6,8 @@ import withReduxSaga from 'next-redux-saga';
 import HtmlHead from '../components/HtmlHead';
 import configureStore from '../store/store';
 import '../components/PageProgressBar'; // Beautiful page transition indicator.
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 class Application extends App {
   static async getInitialProps({ Component, ctx }) {
